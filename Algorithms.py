@@ -266,4 +266,18 @@ def double_char(str):
 
 print double_char('The')
 
-# 21
+# 21 Sum triangle from array
+
+def pyramid(string):
+	if len(string) < 1:
+		return string
+
+	bu = [0] * (len(string) - 1)
+	for i in range(0, len(string) -1):
+		x = string[i] + string[i +1]
+		bu[i] = x
+	pyramid(bu)
+	print string
+
+string = [1, 2, 3, 1]
+pyramid(string)
