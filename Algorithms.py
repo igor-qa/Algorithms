@@ -264,7 +264,7 @@ def double_char(str):
         c += str[i] * 2
     return c
 
-print double_char('The')
+print double_char('Hi-There')
 
 # 21 Sum triangle from array
 
@@ -281,3 +281,16 @@ def pyramid(string):
 
 string = [1, 2, 3, 1]
 pyramid(string)
+
+# 22 First Recurring Character
+
+def first_reccuring(given_string):
+    counts = {}
+    for char in given_string:
+        if char in counts:
+            return char
+        else:
+            counts[char] = 1
+    return None
+
+print first_reccuring('DBCABA')
