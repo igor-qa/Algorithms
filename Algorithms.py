@@ -1,5 +1,4 @@
 # 1 Second largest number in List [1, 3, 4, 5, 0, 2]
-import pprint
 
 given_list = [1, 3, 4, 5, 0, 2, 3, 7, 10, 9]
 
@@ -160,10 +159,9 @@ for character in message.upper():
     count.setdefault(character, 0)
     count[character] += 1
 
-pprint.pprint (count)
+print count
 
-
-# 12
+# 12 Anagram Palindrome
 
 def anagramPalindrome(string1):
     count = {}
@@ -202,16 +200,7 @@ words = ["alpha", "omega", "up", "down", "over", "under", "purple", "red", "blue
 sortedwords = sorted(words, key=len)
 print "The longest word in the list is: %s." % (sortedwords[-1])
 
-# 15 Index
-
-List = [1, 2, 3]
-print List.index(2)
-
-for i in List:
-    if i == 2:
-        print i, "with index: ", List.index(i)
-
-# 16 check if digit
+# 15 check if digit
 
 List = ['1', '#2', '3']
 
@@ -221,7 +210,7 @@ for i in List:
     else:
         print False
 
-# 17 Find biggest difference between two numbers
+# 16 Find biggest difference between two numbers
 
 a = [1,2,3,5]
 
@@ -232,13 +221,11 @@ def maxDifference(a):
         for j in range(i + 1, len(a)):
             if (a[j] - a[i] > max_diff):
                 max_diff = a[j] - a[i]
-
     return max_diff
-
 
 print maxDifference(a)
 
-# 18 Print duplicates numbers
+# 17 Print duplicates numbers
 
 numbers = [1,2,3,2,1,5,6,5,5,5]
 
@@ -248,7 +235,7 @@ def countDuplicates(numbers):
 
 print countDuplicates(numbers)
 
-# 19 Delete letter, missing_char('kitten', 1) -> 'ktten'
+# 18 Delete letter, missing_char('kitten', 1) -> 'ktten'
 
 def missing_char(str, n):
   string1 = str.replace(str[n], "")
@@ -256,7 +243,7 @@ def missing_char(str, n):
 
 print missing_char("Hello", 1)
 
-# 20 Return string when first and last chars have been exchange
+# 19 Return string when first and last chars have been exchange
 
 str = 'Hello'
 
@@ -268,3 +255,13 @@ def front_back(str):
     return str[len(str)-1] + mid + str[0]
 
 print front_back(str)
+
+# 20 Return double_char('Hi-There') -> 'HHii--TThheerree'
+
+def double_char(str):
+    c = ''
+    for i in range(len(str)):
+        c += str[i] * 2
+    return c
+
+print double_char('The')
