@@ -22,7 +22,6 @@ def second_largest(given_list):
 print second_largest(given_list)
 print second_largest([-2, -1])
 print second_largest([2, 2, 1])
-print second_largest([])
 
 
 # 2 A larger than B
@@ -47,9 +46,9 @@ print larger_than("2", "1")
 
 # 3 Palindrome
 
-# p1 = "-12"
-# p2 = "1221"
-# p3 = "123421"
+p1 = "-12"
+p2 = "1221"
+p3 = "123421"
 
 
 def palindrome(string1):
@@ -65,11 +64,11 @@ def palindrome(string1):
 #input = raw_input("Enter number: ")
 #print palindrome(input)
 
-# print palindrome(p1)
-# print palindrome(p2)
-# print palindrome(p3)
+palindrome(p1)
+palindrome(p2)
+palindrome(p3)
 
-# 4 Sum of elements devided per 3 and 5 between 1 and 100
+# 4 Sum of elements divided per 3 and 5 between 1 and 100
 
 total = 0
 for i in range(1, 101):
@@ -87,9 +86,6 @@ print total2
 # 5 Reverse
 
 s = "Hello world!"
-s2 = 12345
-s3 = [1, 2, 3, 4, 5]
-
 
 def reverse(s):
     str = ""
@@ -99,8 +95,6 @@ def reverse(s):
 
 
 print (reverse(s))
-# print (reverse(s2))
-# print (reverse(s3))
 
 # 6 Print unique numbers
 
@@ -139,16 +133,37 @@ print find_max(given_list2)
 
 # 10 Find the overlap between two lists
 
-list1 = [1, 2, 3, 5, 6, 9, 14]
-list2 = [1, 5, 6, 15, 17, 21]
+a = [1, 3, 4, 6, 7, 9]
+b = [1, 2, 4, 5, 9, 10]
 
-def find_overlap(list1, list2):
-    for i in list1:
-        if i in list2:
-            print i
-    pass
+def common_element(a, b):
+    p1 = 0
+    p2 = 0
+    result = []
+    while p1 < len(a) and p2 < len(b):
+        if a[p1] == b[p2]:
+            result.append(a[p1])
+            p1 += 1
+            p2 += 1
+        elif a[p1] > b[p2]:
+            p2 += 1
+        else:
+            p1 += 1
+    return result
 
-print find_overlap(list1, list2)
+print common_element(a, b)
+
+
+#list1 = [1, 2, 3, 5, 6, 9, 14]
+#list2 = [1, 5, 6, 15, 17, 21]
+
+#def find_overlap(list1, list2):
+#    for i in list1:
+#        if i in list2:
+#            print i
+#    pass
+
+#find_overlap(list1, list2)
 
 # 11 count characters in message
 
@@ -192,7 +207,7 @@ def firstLetterCapitalized(string1):
     string1 = ' '.join(upperWords)
     print string1
 
-print firstLetterCapitalized(string1)
+firstLetterCapitalized(string1)
 
 # 14 Print longest word
 
@@ -266,23 +281,7 @@ def double_char(str):
 
 print double_char('Hi-There')
 
-# 21 Sum triangle from array
-
-def pyramid(string):
-	if len(string) < 1:
-		return string
-
-	bu = [0] * (len(string) - 1)
-	for i in range(0, len(string) -1):
-		x = string[i] + string[i +1]
-		bu[i] = x
-	pyramid(bu)
-	print string
-
-string = [1, 2, 3, 1]
-pyramid(string)
-
-# 22 First Recurring Character
+# 21 First Recurring Character
 
 def first_reccuring(given_string):
     counts = {}
@@ -293,4 +292,70 @@ def first_reccuring(given_string):
             counts[char] = 1
     return None
 
+
 print first_reccuring('DBCABA')
+
+# 22 Two sum (leetcode #1)
+
+def twoSum(nums, target):
+    for i in range(len(nums)):
+        a = target - nums[i]
+        if a in nums and i != nums.index(a):
+            return i, nums.index(a)
+
+target = 9
+nums = [2, 7, 11, 15]
+
+print twoSum(nums, target)
+
+# 23 Find non_repeating
+
+def non_repeating(a):
+    count = {}
+    for c in a:
+        if c in count:
+            count[c] += 1
+        else:
+            count[c] = 1
+
+    for c in a:
+        if count[c] == 1:
+            return c
+    return None
+
+
+me = 'aabce'
+print non_repeating(me)
+
+
+# 24 Longest common prefix
+
+strs = ['one', 'onew', 'onr']
+
+def longestCommonPrefix(strs):
+    if len(strs) == 0:
+        return ''
+    res = ''
+    strs = sorted(strs)
+    for i in strs[0]:
+        if strs[-1].startswith(res + i):
+            res += i
+        else:
+            break
+    return res
+
+print longestCommonPrefix(strs)
+
+
+# 25 Return the number of times that the string "code" appears anywhere in the given string,
+#  except we'll accept any letter for the 'd', so "cope" and "cooe" count.
+
+def count_code(str):
+    total = 0
+    for i in range(0,len(str)-3):
+        if str[i:i+2] == 'co' and str[i+3] == 'e':
+            total += 1
+    return total
+
+print count_code('aaacodebbb') # 1
+print count_code('codexxcode') # 2
