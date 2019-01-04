@@ -1,12 +1,15 @@
-# 1 Second largest number in List [1, 3, 4, 5, 0, 2]
+# 1 Second largest number in List [1, 3, 4, 5, 0, 2, 5]
 
-given_list = [1, 3, 4, 5, 0, 2, 3, 7, 10, 9]
-
+given_list = [1, 3, 4, 5, 0, 2, 3, 7, 10, 9, 10]
 
 def second_largest(given_list):
+    set1 = set()
+    for i in given_list:
+        set1.add(i)
+
     largest = None
     second_largest = None
-    for current_number in given_list:
+    for current_number in set1:
         if largest == None:
             largest = current_number
         elif current_number > largest:
@@ -271,6 +274,20 @@ def front_back(str):
 
 print front_back(str)
 
+# + numbers
+
+list = [1,2,3,4,5]
+
+def changeFL(list):
+    mid = list[1:len(list)-1]
+    s = list[-1]
+    l = list[0]
+    mid.insert(0, s)
+    mid.insert(len(list), l)
+    print mid
+
+print changeFL(list)
+
 # 20 Return double_char('Hi-There') -> 'HHii--TThheerree'
 
 def double_char(str):
@@ -293,7 +310,7 @@ def first_reccuring(given_string):
     return None
 
 
-print first_reccuring('DBCABA')
+print first_reccuring('DBCABA') # B
 
 # 22 Two sum (leetcode #1)
 
@@ -330,21 +347,21 @@ print non_repeating(me)
 
 # 24 Longest common prefix
 
-strs = ['one', 'onew', 'onr']
+str = ['one', 'onew', 'onr']
 
-def longestCommonPrefix(strs):
-    if len(strs) == 0:
+def longestCommonPrefix(str):
+    if len(str) == 0:
         return ''
     res = ''
-    strs = sorted(strs)
-    for i in strs[0]:
-        if strs[-1].startswith(res + i):
+    str = sorted(str)
+    for i in str[0]:
+        if str[-1].startswith(res + i):
             res += i
         else:
             break
     return res
 
-print longestCommonPrefix(strs)
+print longestCommonPrefix(str)
 
 
 # 25 Return the number of times that the string "code" appears anywhere in the given string,
@@ -359,3 +376,23 @@ def count_code(str):
 
 print count_code('aaacodebbb') # 1
 print count_code('codexxcode') # 2
+
+# 26 Leetcode 121. Best Time to Buy and Sell Stock
+
+def maxProfit(prices):
+    if len(prices) == 0:
+        return 0
+    else:
+        low = 99
+        profitmax = 0
+        for price in prices:
+            if price > low:
+                if price - low > profitmax:
+                    profitmax = price - low
+            elif price < low:
+                low = price
+        return profitmax
+
+
+shares = [7, 1, 5, 3, 6, 4]
+print maxProfit(shares)
