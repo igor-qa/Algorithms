@@ -21,11 +21,9 @@ def second_largest(given_list):
             second_largest = current_number
     return second_largest
 
-
 print second_largest(given_list)
 print second_largest([-2, -1])
 print second_largest([2, 2, 1])
-
 
 # 2 A larger than B
 
@@ -43,16 +41,13 @@ def larger_than(a, b):
             return False
     return False
 
-
 print larger_than("2", "1")
-
 
 # 3 Palindrome
 
 p1 = "-12"
 p2 = "1221"
 p3 = "123421"
-
 
 def palindrome(string1):
     string2 = string1[::-1]
@@ -62,7 +57,6 @@ def palindrome(string1):
         print "{} it is a palindrome".format(string1)
     else:
         print "{} it is not a palindrome".format(string1)
-
 
 #input = raw_input("Enter number: ")
 #print palindrome(input)
@@ -95,7 +89,6 @@ def reverse(s):
     for i in s:
         str = i + str
     return str
-
 
 print (reverse(s))
 
@@ -130,7 +123,6 @@ def find_max(given_list2):
         elif item > current_max:
             current_max = item
     return current_max
-
 
 print find_max(given_list2)
 
@@ -196,7 +188,6 @@ def anagramPalindrome(string1):
         return False
     else:
         return True
-
 
 print(anagramPalindrome("carrace"))  # True
 print(anagramPalindrome("cutoo"))  # False
@@ -309,7 +300,6 @@ def first_reccuring(given_string):
             counts[char] = 1
     return None
 
-
 print first_reccuring('DBCABA') # B
 
 # 22 Two sum (leetcode #1)
@@ -343,7 +333,6 @@ def non_repeating(a):
 
 me = 'aabce'
 print non_repeating(me)
-
 
 # 24 Longest common prefix
 
