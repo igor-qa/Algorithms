@@ -393,6 +393,13 @@ def maxProfit(prices):
                 low = price
         return profitmax
 
-
 shares = [7, 1, 5, 3, 6, 4]
 print maxProfit(shares)
+
+# 27 Leetcode 771. Jewels and Stones Input: J = "aA", S = "aAAbbbb" Output: 3
+
+def numJewelsInStones(j, s):
+    return sum(stone in j for stone in s)
+
+print numJewelsInStones('aAA','aAAbbbB') # 3
+print numJewelsInStones('zas','ZZAASS') # 0
