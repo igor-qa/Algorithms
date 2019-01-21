@@ -271,7 +271,7 @@ list = [1,2,3,4,5]
 
 def changeFL(list):
     mid = list[1:len(list)-1]
-    s = list[-1]
+    s = list[len(list)-1]
     l = list[0]
     mid.insert(0, s)
     mid.insert(len(list), l)
@@ -432,3 +432,20 @@ def mostCommonWord(paragraph, banned):
 
 print mostCommonWord('Hello hello are Are are', 'are') # hello
 
+# 30 Create new dictionary with elements from 2 other dictionaries
+
+d1 = {'apple':10, 'banana' : 5}
+d2 = {'apple':5, 'pears':3}
+d3 = {}
+
+d3 = d1
+for i in d2:
+    if i in d1:
+        d3[i] += d2[i]
+    elif i not in d1:
+        d3[i] = d2[i]
+
+print d3
+
+del d3['pears']
+print d3
