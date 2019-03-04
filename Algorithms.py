@@ -201,7 +201,7 @@ def firstLetterCapitalized(string1):
     string1 = ' '.join(upperWords)
     print string1
 
-firstLetterCapitalized(string1)
+print firstLetterCapitalized(string1)
 
 # 14 Print longest word
 
