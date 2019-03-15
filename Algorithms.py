@@ -101,12 +101,12 @@ for i in n1:
     set1.add(i)
 print set1
 
-# 7 print unique letters
+# 7 Print unique letters
 
 n4 = list(dict.fromkeys('aaabcabccd'))
 print n4
 
-# 8 count unique letters
+# 8 Count unique letters
 
 n5 = 'aaabcabccd'
 print n5.count('a')
@@ -160,7 +160,7 @@ print common_element(a, b)
 
 #find_overlap(list1, list2)
 
-# 11 count characters in message
+# 11 Count characters in message
 
 message = 'Hello. Try count all letters in this message.'
 count = {}
@@ -209,7 +209,7 @@ words = ["alpha", "omega", "up", "down", "over", "under", "purple", "red", "blue
 sortedwords = sorted(words, key=len)
 print "The longest word in the list is: %s." % (sortedwords[-1])
 
-# 15 check if digit
+# 15 Check if digit
 
 List = ['1', '#2', '3']
 
