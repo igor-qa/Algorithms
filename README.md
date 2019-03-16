@@ -17,13 +17,13 @@
 * [x] 13 Change first letter for capitalize in every word of string
 * [x] 14 Print longest word
 * [x] 15 Check if digit
-* [ ] 16 ..
-* [ ] 17 ..
-* [ ] 18 ..
-* [ ] 19 ..
-* [ ] 20 ..
-* [ ] 21 ..
-* [ ] 22 ..
+* [x] 16 Find biggest difference between two numbers
+* [x] 17 Print duplicates numbers
+* [x] 18 Delete letter, missing_char('kitten', 1) -> 'ktten'
+* [x] 19 Return string when first and last chars have been exchange
+* [x] 20 Return double_char('Hi-There') -> 'HHii--TThheerree'
+* [x] 21 First Recurring Character
+* [x] 22 Two sum (leetcode #1)
 * [ ] 23 ..
 * [ ] 24 ..
 * [ ] 25 ..
