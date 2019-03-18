@@ -24,8 +24,8 @@
 * [x] 20 Return double_char('Hi-There') -> 'HHii--TThheerree'
 * [x] 21 First Recurring Character
 * [x] 22 Two sum (leetcode #1)
-* [ ] 23 ..
-* [ ] 24 ..
+* [x] 23 Find non_repeating
+* [x] 24 Longest common prefix
 * [ ] 25 ..
 * [ ] 26 ..
 * [ ] 27 ..
