@@ -26,7 +26,8 @@
 * [x] 22 Two sum (leetcode #1)
 * [x] 23 Find non_repeating
 * [x] 24 Longest common prefix
-* [ ] 25 ..
+* [x] 25 Return the number of times that the string "code" appears anywhere in the given string,
+except we'll accept any letter for the 'd', so "cope" and "cooe" count.
 * [ ] 26 ..
 * [ ] 27 ..
 * [ ] 28 ..
