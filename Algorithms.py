@@ -92,6 +92,19 @@ def reverse(s):
 
 print (reverse(s))
 
+# + list
+
+A1 = [1, 2, 3, 4, 5]
+
+def reverse(A):
+    print(A)
+    N = len(A)
+    for k in range(N//2):
+        A[k], A[N - 1 - k] = A[N - 1 - k], A[k]
+    print(A)
+
+reverse(A1)
+
 # 6 Print unique numbers
 
 n1 = [1, 2, 1, 2, 3, 4, 5, 4]

@@ -12,7 +12,24 @@ nums = [2, 7, 11, 15]
 
 print (twoSum(nums, target))    # (0, 1)
 
-#2 - #20. Valid Parentheses
+#2 - #9. Palindrome Number
+
+x = 121
+x2 = -121
+
+def isPalindrome(x):
+    x2 = str(x)[::-1]
+    if int(x) < 0:
+        return False
+    elif str(x) == x2:
+        return True
+    else:
+        return False
+
+print(isPalindrome(x))  # True
+print(isPalindrome(x2)) # False
+
+#3 - #20. Valid Parentheses
 
 s = '([]){([])}'
 s1 = '([]){([])'
@@ -33,7 +50,7 @@ def isValid(s):
 print (isValid(s))    # True
 print (isValid(s1))   # False
 
-#3 - #121. Best Time to Buy and Sell Stock
+#4 - #121. Best Time to Buy and Sell Stock
 
 def maxProfit(prices):
     if len(prices) == 0:
@@ -52,7 +69,7 @@ def maxProfit(prices):
 shares = [7, 1, 5, 3, 6, 4]
 print (maxProfit(shares))
 
-#4 - #217. Contains Duplicate
+#5 - #217. Contains Duplicate
 
 list1 = [1,2,3,1]
 list2 = [1,2,3,4]
@@ -72,7 +89,7 @@ def containsDuplicate(nums):
 print(containsDuplicate(list1)) # True
 print(containsDuplicate(list2)) # False
 
-# 5 - #242. Valid Anagram
+#6 - #242. Valid Anagram
 
 def isAnagram(s, t):
     count1 = {}
@@ -98,7 +115,7 @@ def isAnagram(s, t):
 print (isAnagram("anagram","nagaram")) # True
 print (isAnagram("anagram","nagamam")) # False
 
-#6 - #771. Jewels and Stones
+#7 - #771. Jewels and Stones
 
 def numJewelsInStones(j, s):
     return sum(stone in j for stone in s)
@@ -106,7 +123,7 @@ def numJewelsInStones(j, s):
 print (numJewelsInStones('aAA','aAAbbbB')) # 3
 print (numJewelsInStones('zas','ZZAASS')) # 0
 
-#7 - #819. Most Common Word
+#8 - #819. Most Common Word
 
 def mostCommonWord(paragraph, banned):
     for c in "!?',;.": paragraph = paragraph.replace(c, " ")
