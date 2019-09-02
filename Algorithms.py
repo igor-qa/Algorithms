@@ -259,9 +259,7 @@ str = 'Hello'
 def front_back(str):
     if len(str) <= 1:
         return str
-
-    mid = str[1:len(str)-1]
-    return str[len(str)-1] + mid + str[0]
+    return str[len(str)-1] + str[1:len(str)-1] + str[0]
 
 print (front_back(str))
 
@@ -271,10 +269,10 @@ list = [1,2,3,4,5]
 
 def changeFL(list):
     mid = list[1:len(list)-1]
-    s = list[len(list)-1]
-    l = list[0]
-    mid.insert(0, s)
-    mid.insert(len(list), l)
+    first = list[0]
+    last = list[-1]
+    mid.insert(0, last)
+    mid.insert(len(list), first)
     return mid
 
 print (changeFL(list))
@@ -302,20 +300,7 @@ def first_reccuring(given_string):
 
 print (first_reccuring('DBCABA')) # B
 
-# 22 Two sum (leetcode #1)
-
-def twoSum(nums, target):
-    for i in range(len(nums)):
-        a = target - nums[i]
-        if a in nums and i != nums.index(a):
-            return i, nums.index(a)
-
-target = 9
-nums = [2, 7, 11, 15]
-
-print (twoSum(nums, target))
-
-# 23 Find non_repeating
+# 22 Find non_repeating
 
 def non_repeating(a):
     count = {}
@@ -334,7 +319,7 @@ def non_repeating(a):
 me = 'aabce'
 print (non_repeating(me))
 
-# 24 Longest common prefix
+# 23 Longest common prefix
 
 str = ['one', 'onew', 'onr']
 
@@ -353,7 +338,7 @@ def longestCommonPrefix(str):
 print (longestCommonPrefix(str))
 
 
-# 25 Return the number of times that the string "code" appears anywhere in the given string,
+# 24 Return the number of times that the string "code" appears anywhere in the given string,
 #  except we'll accept any letter for the 'd', so "cope" and "cooe" count.
 
 def count_code(str):
@@ -366,73 +351,7 @@ def count_code(str):
 print (count_code('aaacodebbb')) # 1
 print (count_code('codexxcode')) # 2
 
-# 26 Leetcode 121. Best Time to Buy and Sell Stock
-
-def maxProfit(prices):
-    if len(prices) == 0:
-        return 0
-    else:
-        low = 99999
-        profitmax = 0
-        for price in prices:
-            if price > low:
-                if price - low > profitmax:
-                    profitmax = price - low
-            elif price < low:
-                low = price
-        return profitmax
-
-shares = [7, 1, 5, 3, 6, 4]
-print (maxProfit(shares))
-
-# 27 Leetcode 771. Jewels and Stones Input: J = "aA", S = "aAAbbbb" Output: 3
-
-def numJewelsInStones(j, s):
-    return sum(stone in j for stone in s)
-
-print (numJewelsInStones('aAA','aAAbbbB')) # 3
-print (numJewelsInStones('zas','ZZAASS')) # 0
-
-# 28 Leetcode 20. Valid Parentheses
-s = '([]){([])}'
-s1 = '([]){([])'
-
-def isValid(s):
-    bracket_map = {"(": ")", "[": "]", "{": "}"}
-    open_par = set(["(", "[", "{"])
-    stack = []
-    for i in s:
-        if i in open_par:
-            stack.append(i)
-        elif stack and i == bracket_map[stack[-1]]:
-            stack.pop()
-        else:
-            return False
-    return stack == []
-
-print (isValid(s))    # True
-print (isValid(s1))   # False
-
-# 29 Leetcode 819. Most Common Word
-
-def mostCommonWord(paragraph, banned):
-    for c in "!?',;.": paragraph = paragraph.replace(c, " ")
-    d, res, count = {}, "", 0
-    for word in paragraph.lower().split():
-        if word in banned:
-            continue;
-        elif word in d:
-            d[word] += 1
-        else:
-            d[word] = 1
-        if d[word] > count:
-            count = d[word]
-            res = word
-    return res
-
-print (mostCommonWord('Hello hello are Are are', 'are')) # hello
-
-# 30 Create new dictionary with elements from 2 other dictionaries
+# 25 Create new dictionary with elements from 2 other dictionaries
 
 d1 = {'apple':10, 'banana' : 5}
 d2 = {'apple':5, 'pears':3}
@@ -450,7 +369,7 @@ print (d3)
 del d3['pears']
 print (d3)
 
-# 31 Prime numbers
+# 26 Prime numbers
 
 for n in range(51):
     if (n == 0 or n == 1):  # Handles case for n == 0 or n == 1

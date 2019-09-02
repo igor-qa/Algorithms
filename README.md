@@ -1,6 +1,6 @@
-# Algorithms solution in Python
+# Algorithms solution in Python3
 
-### Collection from SF Bay Area Interviews
+### Algorithms.py
 
 * [x] 1 Second largest number in List
 * [x] 2 A larger than B
@@ -23,13 +23,22 @@
 * [x] 19 Return string when first and last chars have been exchange
 * [x] 20 Return double_char('Hi-There') -> 'HHii--TThheerree'
 * [x] 21 First Recurring Character
-* [x] 22 Two sum (leetcode #1)
-* [x] 23 Find non_repeating
-* [x] 24 Longest common prefix
-* [x] 25 Return the number of times that the string "code" appears anywhere in the given string,
-except we'll accept any letter for the 'd', so "cope" and "cooe" count.
-* [ ] 26 ..
-* [ ] 27 ..
-* [ ] 28 ..
-* [ ] 29 ..
-* [ ] 30 ..
+* [x] 22 Find non_repeating
+* [x] 23 Longest common prefix
+* [x] 24 Return the number of times that the string "code" appears
+      anywhere in the given string, except we'll accept any letter for
+      the 'd', so "cope" and "cooe" count.
+* [x] 25 Create new dictionary with elements from 2 other dictionaries
+* [x] 27 Prime numbers
+
+
+### Leetcode.py
+
+* [x] 1 #1. Two Sum
+* [x] 2 #217. Contains Duplicate
+* [x] 3 #121. Best Time to Buy and Sell Stock
+* [x] 4 #242. Valid Anagram
+* [x] 5 #20. Valid Parentheses
+* [x] 6 #121. Best Time to Buy and Sell Stock
+* [x] 7 #771. Jewels and Stones 
+* [x] 8 - #819. Most Common Word 
