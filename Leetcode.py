@@ -12,7 +12,47 @@ nums = [2, 7, 11, 15]
 
 print (twoSum(nums, target))    # (0, 1)
 
-#2 - #217. Contains Duplicate
+#2 - #20. Valid Parentheses
+
+s = '([]){([])}'
+s1 = '([]){([])'
+
+def isValid(s):
+    bracket_map = {"(": ")", "[": "]", "{": "}"}
+    open_par = set(["(", "[", "{"])
+    stack = []
+    for i in s:
+        if i in open_par:
+            stack.append(i)
+        elif stack and i == bracket_map[stack[-1]]:
+            stack.pop()
+        else:
+            return False
+    return stack == []
+
+print (isValid(s))    # True
+print (isValid(s1))   # False
+
+#3 - #121. Best Time to Buy and Sell Stock
+
+def maxProfit(prices):
+    if len(prices) == 0:
+        return 0
+    else:
+        low = 99999
+        profitmax = 0
+        for price in prices:
+            if price > low:
+                if price - low > profitmax:
+                    profitmax = price - low
+            elif price < low:
+                low = price
+        return profitmax
+
+shares = [7, 1, 5, 3, 6, 4]
+print (maxProfit(shares))
+
+#4 - #217. Contains Duplicate
 
 list1 = [1,2,3,1]
 list2 = [1,2,3,4]
@@ -32,26 +72,7 @@ def containsDuplicate(nums):
 print(containsDuplicate(list1)) # True
 print(containsDuplicate(list2)) # False
 
-#3 - #121. Best Time to Buy and Sell Stock
-
-def maxProfit(prices):
-    if len(prices) == 0:
-        return 0
-    else:
-        low = 99999
-        profitmax = 0
-        for price in prices:
-            if price > low:
-                if price - low > profitmax:
-                    profitmax = price - low
-            elif price < low:
-                low = price
-        return profitmax
-
-shares = [7, 1, 5, 3, 6, 4]
-print (maxProfit(shares)) # 5
-
-#4 - #242. Valid Anagram
+# 5 - #242. Valid Anagram
 
 def isAnagram(s, t):
     count1 = {}
@@ -77,47 +98,7 @@ def isAnagram(s, t):
 print (isAnagram("anagram","nagaram")) # True
 print (isAnagram("anagram","nagamam")) # False
 
-#5 - #20. Valid Parentheses
-
-s = '([]){([])}'
-s1 = '([]){([])'
-
-def isValid(s):
-    bracket_map = {"(": ")", "[": "]", "{": "}"}
-    open_par = set(["(", "[", "{"])
-    stack = []
-    for i in s:
-        if i in open_par:
-            stack.append(i)
-        elif stack and i == bracket_map[stack[-1]]:
-            stack.pop()
-        else:
-            return False
-    return stack == []
-
-print (isValid(s))    # True
-print (isValid(s1))   # False
-
-#6 - #121. Best Time to Buy and Sell Stock
-
-def maxProfit(prices):
-    if len(prices) == 0:
-        return 0
-    else:
-        low = 99999
-        profitmax = 0
-        for price in prices:
-            if price > low:
-                if price - low > profitmax:
-                    profitmax = price - low
-            elif price < low:
-                low = price
-        return profitmax
-
-shares = [7, 1, 5, 3, 6, 4]
-print (maxProfit(shares))
-
-#7 - #771. Jewels and Stones
+#6 - #771. Jewels and Stones
 
 def numJewelsInStones(j, s):
     return sum(stone in j for stone in s)
@@ -125,7 +106,7 @@ def numJewelsInStones(j, s):
 print (numJewelsInStones('aAA','aAAbbbB')) # 3
 print (numJewelsInStones('zas','ZZAASS')) # 0
 
-#8 - #819. Most Common Word
+#7 - #819. Most Common Word
 
 def mostCommonWord(paragraph, banned):
     for c in "!?',;.": paragraph = paragraph.replace(c, " ")

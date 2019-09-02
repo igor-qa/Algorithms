@@ -35,10 +35,9 @@
 ### Leetcode.py
 
 * [x] 1 #1. Two Sum
-* [x] 2 #217. Contains Duplicate
+* [x] 2 #20. Valid Parentheses
 * [x] 3 #121. Best Time to Buy and Sell Stock
-* [x] 4 #242. Valid Anagram
-* [x] 5 #20. Valid Parentheses
-* [x] 6 #121. Best Time to Buy and Sell Stock
-* [x] 7 #771. Jewels and Stones 
-* [x] 8 - #819. Most Common Word 
+* [x] 4 #217. Contains Duplicate
+* [x] 5 #242. Valid Anagram
+* [x] 6 #771. Jewels and Stones
+* [x] 7 #819. Most Common Word
