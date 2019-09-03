@@ -332,26 +332,7 @@ def non_repeating(a):
 me = 'aabce'
 print (non_repeating(me))
 
-# 23 Longest common prefix
-
-str = ['one', 'onew', 'onr']
-
-def longestCommonPrefix(str):
-    if len(str) == 0:
-        return ''
-    res = ''
-    str = sorted(str)
-    for i in str[0]:
-        if str[-1].startswith(res + i):
-            res += i
-        else:
-            break
-    return res
-
-print (longestCommonPrefix(str))
-
-
-# 24 Return the number of times that the string "code" appears anywhere in the given string,
+# 23 Return the number of times that the string "code" appears anywhere in the given string,
 #  except we'll accept any letter for the 'd', so "cope" and "cooe" count.
 
 def count_code(str):
@@ -364,7 +345,7 @@ def count_code(str):
 print (count_code('aaacodebbb')) # 1
 print (count_code('codexxcode')) # 2
 
-# 25 Create new dictionary with elements from 2 other dictionaries
+# 24 Create new dictionary with elements from 2 other dictionaries
 
 d1 = {'apple':10, 'banana' : 5}
 d2 = {'apple':5, 'pears':3}
@@ -382,7 +363,7 @@ print (d3)
 del d3['pears']
 print (d3)
 
-# 26 Prime numbers
+# 25 Prime numbers
 
 for n in range(51):
     if (n == 0 or n == 1):  # Handles case for n == 0 or n == 1
@@ -394,3 +375,6 @@ for n in range(51):
             break
         if (i == n - 1):  # This means we have evaluated every possible divisor besides n.
             print(str(n) + " is prime.")
+
+
+

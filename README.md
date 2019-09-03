@@ -24,20 +24,21 @@
 * [x] 20 Return double_char('Hi-There') -> 'HHii--TThheerree'
 * [x] 21 First Recurring Character
 * [x] 22 Find non_repeating
-* [x] 23 Longest common prefix
-* [x] 24 Return the number of times that the string "code" appears
+* [x] 23 Return the number of times that the string "code" appears
       anywhere in the given string, except we'll accept any letter for
       the 'd', so "cope" and "cooe" count.
-* [x] 25 Create new dictionary with elements from 2 other dictionaries
-* [x] 27 Prime numbers
+* [x] 24 Create new dictionary with elements from 2 other dictionaries
+* [x] 25 Prime numbers
 
 
 ### Leetcode.py
 
 * [x] 1 #1. Two Sum
-* [x] 2 #20. Valid Parentheses
-* [x] 3 #121. Best Time to Buy and Sell Stock
-* [x] 4 #217. Contains Duplicate
-* [x] 5 #242. Valid Anagram
-* [x] 6 #771. Jewels and Stones
-* [x] 7 #819. Most Common Word
+* [x] 2 #9. Palindrome Number
+* [x] 3 #14. Longest Common Prefix
+* [x] 4 #20. Valid Parentheses
+* [x] 5 #121. Best Time to Buy and Sell Stock
+* [x] 6 #217. Contains Duplicate
+* [x] 7 #242. Valid Anagram
+* [x] 8 #771. Jewels and Stones
+* [x] 9 #819. Most Common Word

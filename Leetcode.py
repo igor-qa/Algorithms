@@ -29,7 +29,25 @@ def isPalindrome(x):
 print(isPalindrome(x))  # True
 print(isPalindrome(x2)) # False
 
-#3 - #20. Valid Parentheses
+#3 - 14. Longest Common Prefix
+
+str = ['one', 'onew', 'onr']
+
+def longestCommonPrefix(str):
+    if len(str) == 0:
+        return ''
+    res = ''
+    str = sorted(str)
+    for i in str[0]:
+        if str[-1].startswith(res + i):
+            res += i
+        else:
+            break
+    return res
+
+print (longestCommonPrefix(str))
+
+#4 - #20. Valid Parentheses
 
 s = '([]){([])}'
 s1 = '([]){([])'
@@ -50,7 +68,7 @@ def isValid(s):
 print (isValid(s))    # True
 print (isValid(s1))   # False
 
-#4 - #121. Best Time to Buy and Sell Stock
+#5 - #121. Best Time to Buy and Sell Stock
 
 def maxProfit(prices):
     if len(prices) == 0:
@@ -69,7 +87,7 @@ def maxProfit(prices):
 shares = [7, 1, 5, 3, 6, 4]
 print (maxProfit(shares))
 
-#5 - #217. Contains Duplicate
+#6 - #217. Contains Duplicate
 
 list1 = [1,2,3,1]
 list2 = [1,2,3,4]
@@ -89,7 +107,7 @@ def containsDuplicate(nums):
 print(containsDuplicate(list1)) # True
 print(containsDuplicate(list2)) # False
 
-#6 - #242. Valid Anagram
+#7 - #242. Valid Anagram
 
 def isAnagram(s, t):
     count1 = {}
@@ -115,7 +133,7 @@ def isAnagram(s, t):
 print (isAnagram("anagram","nagaram")) # True
 print (isAnagram("anagram","nagamam")) # False
 
-#7 - #771. Jewels and Stones
+#8 - #771. Jewels and Stones
 
 def numJewelsInStones(j, s):
     return sum(stone in j for stone in s)
@@ -123,7 +141,7 @@ def numJewelsInStones(j, s):
 print (numJewelsInStones('aAA','aAAbbbB')) # 3
 print (numJewelsInStones('zas','ZZAASS')) # 0
 
-#8 - #819. Most Common Word
+#9 - #819. Most Common Word
 
 def mostCommonWord(paragraph, banned):
     for c in "!?',;.": paragraph = paragraph.replace(c, " ")
