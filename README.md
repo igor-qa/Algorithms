@@ -37,8 +37,9 @@
 * [x] 2 #9. Palindrome Number
 * [x] 3 #14. Longest Common Prefix
 * [x] 4 #20. Valid Parentheses
-* [x] 5 #121. Best Time to Buy and Sell Stock
-* [x] 6 #217. Contains Duplicate
-* [x] 7 #242. Valid Anagram
-* [x] 8 #771. Jewels and Stones
-* [x] 9 #819. Most Common Word
+* [x] 5 #27. Remove Element
+* [x] 6 #121. Best Time to Buy and Sell Stock
+* [x] 7 #217. Contains Duplicate
+* [x] 8 #242. Valid Anagram
+* [x] 9 #771. Jewels and Stones
+* [x] 10 #819. Most Common Word

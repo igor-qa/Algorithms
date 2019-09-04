@@ -68,7 +68,20 @@ def isValid(s):
 print (isValid(s))    # True
 print (isValid(s1))   # False
 
-#5 - #121. Best Time to Buy and Sell Stock
+#5 - #27. Remove Element
+
+nums = [3,2,2,3]
+val = 3
+
+def removeElement(nums):
+    for i in nums[:]:
+        if i == val:
+            nums.remove(i)
+    return len(nums)
+
+print(removeElement(nums, val)) # 2
+
+#6 - #121. Best Time to Buy and Sell Stock
 
 def maxProfit(prices):
     if len(prices) == 0:
@@ -87,7 +100,7 @@ def maxProfit(prices):
 shares = [7, 1, 5, 3, 6, 4]
 print (maxProfit(shares))
 
-#6 - #217. Contains Duplicate
+#7 - #217. Contains Duplicate
 
 list1 = [1,2,3,1]
 list2 = [1,2,3,4]
@@ -107,7 +120,7 @@ def containsDuplicate(nums):
 print(containsDuplicate(list1)) # True
 print(containsDuplicate(list2)) # False
 
-#7 - #242. Valid Anagram
+#8 - #242. Valid Anagram
 
 def isAnagram(s, t):
     count1 = {}
@@ -133,7 +146,7 @@ def isAnagram(s, t):
 print (isAnagram("anagram","nagaram")) # True
 print (isAnagram("anagram","nagamam")) # False
 
-#8 - #771. Jewels and Stones
+#9 - #771. Jewels and Stones
 
 def numJewelsInStones(j, s):
     return sum(stone in j for stone in s)
@@ -141,7 +154,7 @@ def numJewelsInStones(j, s):
 print (numJewelsInStones('aAA','aAAbbbB')) # 3
 print (numJewelsInStones('zas','ZZAASS')) # 0
 
-#9 - #819. Most Common Word
+#10 - #819. Most Common Word
 
 def mostCommonWord(paragraph, banned):
     for c in "!?',;.": paragraph = paragraph.replace(c, " ")
