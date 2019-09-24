@@ -272,9 +272,9 @@ str = 'Hello'
 def front_back(str):
     if len(str) <= 1:
         return str
-    return str[len(str)-1] + str[1:len(str)-1] + str[0]
+    return str[-1] + str[1:len(str)-1] + str[0]
 
-print (front_back(str))
+print (front_back(str)) # oellH
 
 # + numbers
 
@@ -285,10 +285,10 @@ def changeFL(list):
     first = list[0]
     last = list[-1]
     mid.insert(0, last)
-    mid.insert(len(list), first)
+    mid.insert(len(list)-1, first)
     return mid
 
-print (changeFL(list))
+print (changeFL(list))  # [5, 2, 3, 4, 1]
 
 # 20 Return double_char('Hi-There') -> 'HHii--TThheerree'
 
@@ -330,7 +330,7 @@ def non_repeating(a):
 
 
 me = 'aabce'
-print (non_repeating(me))
+print (non_repeating(me)) # b
 
 # 23 Return the number of times that the string "code" appears anywhere in the given string,
 #  except we'll accept any letter for the 'd', so "cope" and "cooe" count.
@@ -369,12 +369,9 @@ for n in range(51):
     if (n == 0 or n == 1):  # Handles case for n == 0 or n == 1
         continue
     if (n == 2):    # Handles case for n == 2
-        print(str(n) + " is prime")
+        print(n, " is prime")
     for i in range(2, n):
         if (n % i == 0):  # If n%i == 0 then we know n cannot be prime. Ex: 4%2, 8%2.
             break
         if (i == n - 1):  # This means we have evaluated every possible divisor besides n.
-            print(str(n) + " is prime.")
-
-
-
+            print(n, " is prime.")

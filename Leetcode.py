@@ -73,7 +73,7 @@ print (isValid(s1))   # False
 nums = [3,2,2,3]
 val = 3
 
-def removeElement(nums):
+def removeElement(nums, val):
     for i in nums[:]:
         if i == val:
             nums.remove(i)
@@ -157,11 +157,12 @@ print (numJewelsInStones('zas','ZZAASS')) # 0
 #10 - #819. Most Common Word
 
 def mostCommonWord(paragraph, banned):
-    for c in "!?',;.": paragraph = paragraph.replace(c, " ")
+    for c in "!?',;.":
+        paragraph = paragraph.replace(c, " ")
     d, res, count = {}, "", 0
     for word in paragraph.lower().split():
         if word in banned:
-            continue;
+            continue
         elif word in d:
             d[word] += 1
         else:
@@ -172,3 +173,14 @@ def mostCommonWord(paragraph, banned):
     return res
 
 print (mostCommonWord('Hello hello are Are are', 'are')) # hello
+
+#11 - 1108. Defanging an IP Address, Input: address = "1.1.1.1" - Output: "1[.]1[.]1[.]1"
+
+address = "1.1.1.1"
+
+def defanging (address):
+    for i in ".":
+        address = address.replace(i, "[.]")
+    return address
+
+print(defanging(address))
