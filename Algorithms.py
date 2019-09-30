@@ -375,3 +375,167 @@ for n in range(51):
             break
         if (i == n - 1):  # This means we have evaluated every possible divisor besides n.
             print(n, " is prime.")
+
+# 26 Linear search - O(N) - best case O(1)
+
+a1 = [4, 8, 15, 16, 23, 42]
+def linearSearch(a1):
+    for i in range(len(a1)):
+        if i == 50:
+            print("Found")
+    print("Not found")
+
+linearSearch(a1)
+
+#or
+
+names = ["EMMA", "RODRIGO", "BRIAN", "DAVID"]
+
+def searchNames(names):
+    for i in range(len(names)):
+        if names[i] == "EMMA":
+            print("Found")
+            return 0
+    print("Not found")
+    return 1
+
+searchNames(names)
+
+# 27 Binary search | O (log n)
+
+list = [4,7,8,12,45,99,102,702,]
+target = 7
+
+# Iterative Binary Search
+def binary_search(list, target):
+    low = 0
+    high = len(list) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+        if target == list[mid]:
+            return True
+        elif target < list[mid]:
+            high = mid - 1
+        else:
+            low = mid + 1
+    return False
+
+print(binary_search(list, target))
+
+# 28 Bubble sort | Swap elements
+
+A = [5, 9, 1, 2, 4, 8, 6, 3, 7]
+
+def bubblesort(A):
+    for i in range(0, len(A) - 1):
+        for j in range(0, len(A) - 1 - i):
+            if A[j] > A[j + 1]:
+                A[j], A[j + 1] = A[j + 1], A[j]
+    return A
+
+print(bubblesort(A))
+
+# asymptotic time complexity - 0(n2) - tita (0) of n square - performance is worst (not good to use for sorting for 1 mln numbers)
+
+# 29 Selection sort | Brute force - Locate the smallest item and put it in the first place, then the next smallest and put it in second place. From left to right.
+
+A = [5,9,1,2,4,8,6,3,7]
+
+def selectionsort(A):
+    for i in range (0, len(A)-1):
+        minIndex = i
+        for j in range (i+1, len(A)):   # itterate for unsorted part of array
+            if A[j] < A[minIndex]:      # If you find smaller item than minIndex
+                minIndex = j            # update the index of the min element
+        if minIndex != i:
+            A[i], A[minIndex] = A[minIndex], A[i]   # exchange/swap elements
+    return A
+
+print(selectionsort(A))
+
+# asymptotic time complexity - 0(n2) - tita (O) of n square - if make input 10 times bigger, time will increase 100 times biggers
+
+# 30 Insertion sort
+
+A = [5,9,1,2,4,8,6,3,7]
+
+def insertionsort(A):
+    for i in range(1, len(A)):
+        for j in range(i-1, -1, -1):
+            if A[j] > A[j+1]:
+                A[j], A[j+1] = A[j+1], A[j]
+            else:
+                break
+    return A
+
+print(insertionsort(A))
+
+# 31 Recursion | Fibonacci Numbers 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,..
+
+def fibo(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibo(n-1) + fibo(n-2)
+
+print (fibo(5))      # 5
+
+
+# 32 Iteration | Fibonacci Numbers 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,..
+def iterFibo(n):
+    a,b = 0,1
+    for i in range(0, n):
+        a,b = b, a + b
+    return a
+print (iterFibo(5))   # 5
+
+# 33 Most frequent number in array
+
+a = [1,3,1,3,2,1]
+
+def most_frequent(a):
+    max_count = -1
+    max_item = None
+    count = {}
+
+    for item in a:
+        if item not in count:
+            count[item] = 1
+        else:
+            count[item] += 1
+        if count[item] > max_count:
+            max_count = count[item]
+            max_item = item
+    return max_item
+
+print(most_frequent(a))
+
+# 34 Two lists are rotation from each other but in different order
+
+a = [1,2,3,4,5,6,7]
+b = [4,5,6,7,1,2,3]
+
+def is_rotation(a,b):
+    if len(a) != len(b):
+        return False
+
+    key = a[0]
+    key_i = -1
+    for i in range(len(b)):
+        if b[i] == key:
+            key_i = i
+            break
+    if key_i == -1:
+        return False
+    for i in range(len(a)):
+        j = (key_i + i) % len(a)
+        if a[i] != b[j]:
+            return False
+    return True
+
+print(is_rotation(a, b))
+
+### Insertion Sort, Quick sort, Merge sort,
