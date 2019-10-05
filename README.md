@@ -52,6 +52,7 @@
 * [x] 6 #121. Best Time to Buy and Sell Stock
 * [x] 7 #217. Contains Duplicate
 * [x] 8 #242. Valid Anagram
-* [x] 9 #771. Jewels and Stones
-* [x] 10 #819. Most Common Word
-* [x] 11 #1108. Defanging an IP Address
+* [x] 9 #557. Reverse Words in a String III
+* [x] 10 #771. Jewels and Stones
+* [x] 11 #819. Most Common Word
+* [x] 12 #1108. Defanging an IP Address

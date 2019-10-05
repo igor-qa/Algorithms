@@ -146,7 +146,23 @@ def isAnagram(s, t):
 print (isAnagram("anagram","nagaram")) # True
 print (isAnagram("anagram","nagamam")) # False
 
-#9 - #771. Jewels and Stones
+#9 - 557. Reverse Words in a String III
+
+Input = "Let's take LeetCode contest"
+#Output: "s'teL ekat edoCteeL tsetnoc"
+
+def reverse_words(Input):
+    Input = Input.split(" ")
+    reverse = []
+
+    for word in Input:
+        reverse.append(word[::-1])
+    reverse = " ".join(reverse)
+    return reverse
+
+print(reverse_words(Input))
+
+#10 - #771. Jewels and Stones
 
 def numJewelsInStones(j, s):
     return sum(stone in j for stone in s)
@@ -154,7 +170,7 @@ def numJewelsInStones(j, s):
 print (numJewelsInStones('aAA','aAAbbbB')) # 3
 print (numJewelsInStones('zas','ZZAASS')) # 0
 
-#10 - #819. Most Common Word
+#11 - #819. Most Common Word
 
 def mostCommonWord(paragraph, banned):
     for c in "!?',;.":
@@ -174,7 +190,7 @@ def mostCommonWord(paragraph, banned):
 
 print (mostCommonWord('Hello hello are Are are', 'are')) # hello
 
-#11 - 1108. Defanging an IP Address, Input: address = "1.1.1.1" - Output: "1[.]1[.]1[.]1"
+#12 - 1108. Defanging an IP Address, Input: address = "1.1.1.1" - Output: "1[.]1[.]1[.]1"
 
 address = "1.1.1.1"
 
