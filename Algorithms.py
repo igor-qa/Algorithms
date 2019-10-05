@@ -471,7 +471,92 @@ def insertionsort(A):
 
 print(insertionsort(A))
 
-# 31 Recursion | Fibonacci Numbers 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,..
+# 31 Quick Sort | https://www.geeksforgeeks.org/quick-sort/
+
+# This function takes last element as pivot, places
+# the pivot element at its correct position in sorted
+# array, and places all smaller (smaller than pivot)
+# to left of pivot and all greater elements to right
+# of pivot
+def partition(arr, low, high):
+    i = (low - 1)  # index of smaller element
+    pivot = arr[high]  # pivot
+
+    for j in range(low, high):
+
+        # If current element is smaller than the pivot
+        if arr[j] < pivot:
+            # increment index of smaller element
+            i = i + 1
+            arr[i], arr[j] = arr[j], arr[i]
+
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return (i + 1)
+
+
+# The main function that implements QuickSort
+# arr[] --> Array to be sorted,
+# low --> Starting index,
+# high --> Ending index
+
+# Function to do Quick sort
+def quickSort(arr, low, high):
+    if low < high:
+        # pi is partitioning index, arr[p] is now
+        # at right place
+        pi = partition(arr, low, high)
+
+        # Separately sort elements before
+        # partition and after partition
+        quickSort(arr, low, pi - 1)
+        quickSort(arr, pi + 1, high)
+
+    # Driver code to test above
+
+arr = [10, 7, 8, 9, 1, 5]
+n = len(arr)
+quickSort(arr, 0, n - 1)
+print(arr)
+
+# 32 Merge Sort | https://www.geeksforgeeks.org/merge-sort/
+
+def mergeSort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2  # Finding the mid of the array
+        L = arr[:mid]  # Dividing the array elements
+        R = arr[mid:]  # into 2 halves
+
+        mergeSort(L)  # Sorting the first half
+        mergeSort(R)  # Sorting the second half
+
+        i = j = k = 0
+
+        # Copy data to temp arrays L[] and R[]
+        while i < len(L) and j < len(R):
+            if L[i] < R[j]:
+                arr[k] = L[i]
+                i += 1
+            else:
+                arr[k] = R[j]
+                j += 1
+            k += 1
+
+        # Checking if any element was left
+        while i < len(L):
+            arr[k] = L[i]
+            i += 1
+            k += 1
+
+        while j < len(R):
+            arr[k] = R[j]
+            j += 1
+            k += 1
+    return arr
+
+arr = [12, 11, 13, 5, 6, 7]
+print(mergeSort(arr))
+
+# 33 Recursion | Fibonacci Numbers 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,..
 
 def fibo(n):
     if n == 0:
@@ -483,8 +568,7 @@ def fibo(n):
 
 print (fibo(5))      # 5
 
-
-# 32 Iteration | Fibonacci Numbers 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,..
+# 34 Iteration | Fibonacci Numbers 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,..
 def iterFibo(n):
     a,b = 0,1
     for i in range(0, n):
@@ -492,7 +576,7 @@ def iterFibo(n):
     return a
 print (iterFibo(5))   # 5
 
-# 33 Most frequent number in array
+# 35 Most frequent number in array
 
 a = [1,3,1,3,2,1]
 
@@ -513,7 +597,7 @@ def most_frequent(a):
 
 print(most_frequent(a))
 
-# 34 Two lists are rotation from each other but in different order
+# 36 Two lists are rotation from each other but in different order
 
 a = [1,2,3,4,5,6,7]
 b = [4,5,6,7,1,2,3]
@@ -537,5 +621,3 @@ def is_rotation(a,b):
     return True
 
 print(is_rotation(a, b))
-
-### Insertion Sort, Quick sort, Merge sort,

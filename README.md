@@ -29,6 +29,17 @@
       the 'd', so "cope" and "cooe" count.
 * [x] 24 Create new dictionary with elements from 2 other dictionaries
 * [x] 25 Prime numbers
+* [x] 26 Linear search
+* [x] 27 Binary search
+* [x] 28 Bubble sort
+* [x] 29 Selection sort
+* [x] 30 Insertion sort
+* [x] 31 Quick Sort
+* [x] 32 Merge Sort
+* [x] 33 Recursion | Fibonacci Numbers
+* [x] 34 Iteration | Fibonacci Numbers
+* [x] 35 Most frequent number in array
+* [x] 36 Two lists are rotation from each other but in different order
 
 
 ### Leetcode.py
