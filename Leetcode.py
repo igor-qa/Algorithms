@@ -146,7 +146,16 @@ def isAnagram(s, t):
 print (isAnagram("anagram","nagaram")) # True
 print (isAnagram("anagram","nagamam")) # False
 
-#9 - 557. Reverse Words in a String III
+#9 - 509. Fibonacci Number
+
+def iterFibo(n):
+    a,b = 0,1
+    for i in range(0, n):
+        a,b = b, a + b
+    return a
+print (iterFibo(5))   # 5
+
+#10 - 557. Reverse Words in a String III
 
 Input = "Let's take LeetCode contest"
 #Output: "s'teL ekat edoCteeL tsetnoc"
@@ -162,7 +171,7 @@ def reverse_words(Input):
 
 print(reverse_words(Input))
 
-#10 - #771. Jewels and Stones
+#11 - #771. Jewels and Stones
 
 def numJewelsInStones(j, s):
     return sum(stone in j for stone in s)
@@ -170,7 +179,7 @@ def numJewelsInStones(j, s):
 print (numJewelsInStones('aAA','aAAbbbB')) # 3
 print (numJewelsInStones('zas','ZZAASS')) # 0
 
-#11 - #819. Most Common Word
+#12 - #819. Most Common Word
 
 def mostCommonWord(paragraph, banned):
     for c in "!?',;.":
@@ -190,7 +199,7 @@ def mostCommonWord(paragraph, banned):
 
 print (mostCommonWord('Hello hello are Are are', 'are')) # hello
 
-#12 - 1108. Defanging an IP Address, Input: address = "1.1.1.1" - Output: "1[.]1[.]1[.]1"
+#13 - 1108. Defanging an IP Address, Input: address = "1.1.1.1" - Output: "1[.]1[.]1[.]1"
 
 address = "1.1.1.1"
 
