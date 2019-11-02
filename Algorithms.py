@@ -21,9 +21,9 @@ def second_largest(given_list):
             second_largest = current_number
     return second_largest
 
-print (second_largest(given_list))
-print (second_largest([-2, -1]))
-print (second_largest([2, 2, 1]))
+print(second_largest(given_list))
+print(second_largest([-2, -1]))
+print(second_largest([2, 2, 1]))
 
 # 2 A larger than B
 
@@ -41,7 +41,7 @@ def larger_than(a, b):
             return False
     return False
 
-print (larger_than("2", "1"))
+print(larger_than("2", "1"))
 
 # 3 Palindrome
 
@@ -71,14 +71,14 @@ total = 0
 for i in range(1, 101):
     if i % 3 == 0 or i % 5 == 0:
         total += i
-print (total)
+print(total)
 
 # or how many numbers
 total2 = 0
 for i in range(1, 101):
     if i % 3 == 0 or i % 5 == 0:
         total2 += 1
-print (total2)
+print(total2)
 
 # 5 Reverse
 
@@ -90,7 +90,7 @@ def reverse(s):
         str = i + str
     return str
 
-print (reverse(s))
+print(reverse(s))
 
 # + list
 
@@ -112,17 +112,17 @@ n1 = [1, 2, 1, 2, 3, 4, 5, 4]
 set1 = set()
 for i in n1:
     set1.add(i)
-print (set1)
+print(set1)
 
 # 7 Print unique letters
 
 n4 = list(dict.fromkeys('aaabcabccd'))
-print (n4)
+print(n4)
 
 # 8 Count unique letters
 
 n5 = 'aaabcabccd'
-print (n5.count('a'))
+print(n5.count('a'))
 
 # 9 Find max number
 
@@ -137,7 +137,7 @@ def find_max(given_list2):
             current_max = item
     return current_max
 
-print (find_max(given_list2))
+print(find_max(given_list2))
 
 # 10 Find the overlap between two lists
 
@@ -159,7 +159,7 @@ def common_element(a, b):
             p1 += 1
     return result
 
-print (common_element(a, b))
+print(common_element(a, b))
 
 
 #list1 = [1, 2, 3, 5, 6, 9, 14]
@@ -182,7 +182,7 @@ for character in message.upper():
     count.setdefault(character, 0)
     count[character] += 1
 
-print (count)
+print(count)
 
 # 12 Anagram Palindrome
 
@@ -214,13 +214,13 @@ def firstLetterCapitalized(string1):
     string1 = ' '.join(upperWords)
     print (string1)
 
-print (firstLetterCapitalized(string1))
+print(firstLetterCapitalized(string1))
 
 # 14 Print longest word
 
 words = ["alpha", "omega", "up", "down", "over", "under", "purple", "red", "blue", "green"]
 sortedwords = sorted(words, key=len)
-print ("The longest word in the list is: %s." % (sortedwords[-1]))
+print("The longest word in the list is: %s." % (sortedwords[-1]))
 
 # 15 Check if digit
 
@@ -245,7 +245,7 @@ def maxDifference(a):
                 max_diff = a[j] - a[i]
     return max_diff
 
-print (maxDifference(a))
+print(maxDifference(a))
 
 # 17 Print duplicates numbers
 
@@ -255,15 +255,15 @@ def countDuplicates(numbers):
     import collections
     return [item for item, count in collections.Counter(numbers).items() if count > 1]
 
-print (countDuplicates(numbers))
+print(countDuplicates(numbers))
 
 # 18 Delete letter, missing_char('kitten', 1) -> 'ktten'
 
 def missing_char(str, n):
-  string1 = str.replace(str[n], "")
-  return string1
+    string1 = str.replace(str[n], "")
+    return string1
 
-print (missing_char("Hello", 1))
+print(missing_char("Hello", 1))
 
 # 19 Return string when first and last chars have been exchange
 
@@ -274,7 +274,7 @@ def front_back(str):
         return str
     return str[-1] + str[1:len(str)-1] + str[0]
 
-print (front_back(str)) # oellH
+print(front_back(str)) # oellH
 
 # + numbers
 
@@ -288,7 +288,7 @@ def changeFL(list):
     mid.insert(len(list)-1, first)
     return mid
 
-print (changeFL(list))  # [5, 2, 3, 4, 1]
+print(changeFL(list))  # [5, 2, 3, 4, 1]
 
 # 20 Return double_char('Hi-There') -> 'HHii--TThheerree'
 
@@ -298,7 +298,7 @@ def double_char(str):
         c += str[i] * 2
     return c
 
-print (double_char('Hi-There'))
+print(double_char('Hi-There'))
 
 # 21 First Recurring Character
 
@@ -311,7 +311,7 @@ def first_reccuring(given_string):
             counts[char] = 1
     return None
 
-print (first_reccuring('DBCABA')) # B
+print(first_reccuring('DBCABA')) # B
 
 # 22 Find non_repeating
 
@@ -330,7 +330,7 @@ def non_repeating(a):
 
 
 me = 'aabce'
-print (non_repeating(me)) # b
+print(non_repeating(me)) # b
 
 # 23 Return the number of times that the string "code" appears anywhere in the given string,
 #  except we'll accept any letter for the 'd', so "cope" and "cooe" count.
@@ -342,13 +342,13 @@ def count_code(str):
             total += 1
     return total
 
-print (count_code('aaacodebbb')) # 1
-print (count_code('codexxcode')) # 2
+print(count_code('aaacodebbb')) # 1
+print(count_code('codexxcode')) # 2
 
 # 24 Create new dictionary with elements from 2 other dictionaries
 
-d1 = {'apple':10, 'banana' : 5}
-d2 = {'apple':5, 'pears':3}
+d1 = {'apple': 10, 'banana': 5}
+d2 = {'apple': 5, 'pears': 3}
 d3 = {}
 
 d3 = d1
@@ -358,10 +358,10 @@ for i in d2:
     elif i not in d1:
         d3[i] = d2[i]
 
-print (d3)
+print(d3)
 
 del d3['pears']
-print (d3)
+print(d3)
 
 # 25 Prime numbers
 
@@ -381,7 +381,7 @@ for n in range(51):
 a1 = [4, 8, 15, 16, 23, 42]
 def linearSearch(a1):
     for i in range(len(a1)):
-        if i == 50:
+        if a1[i] == 50:
             print("Found")
     print("Not found")
 
