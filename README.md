@@ -1,6 +1,6 @@
 # Algorithms solution in Python3
 
-### Algorithms.py
+## Algorithms.py
 
 * [x] 1 Second largest number in List
 * [x] 2 A larger than B
@@ -42,7 +42,7 @@
 * [x] 36 Two lists are rotation from each other but in different order
 
 
-### Leetcode.py
+## Leetcode.py
 
 * [x] 1 #1. Two Sum
 * [x] 2 #9. Palindrome Number
