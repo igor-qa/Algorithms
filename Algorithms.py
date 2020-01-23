@@ -257,6 +257,24 @@ def countDuplicates(numbers):
 
 print(countDuplicates(numbers))
 
+# or
+
+numbers = [1,2,3,2,1,5,6,5,5,5]
+
+def countDuplicates(numbers):
+
+    count = {}
+
+    for number in numbers:
+        if number in count:
+            count[number] += 1
+        else:
+            count[number] = 1
+
+    return (dict((k, v) for k, v in count.items() if v > 1))
+
+print(countDuplicates(numbers))
+
 # 18 Delete letter, missing_char('kitten', 1) -> 'ktten'
 
 def missing_char(str, n):
