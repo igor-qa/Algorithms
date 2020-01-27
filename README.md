@@ -31,15 +31,10 @@
 * [x] 25 Prime numbers
 * [x] 26 Linear search
 * [x] 27 Binary search
-* [x] 28 Bubble sort
-* [x] 29 Selection sort
-* [x] 30 Insertion sort
-* [x] 31 Quick Sort
-* [x] 32 Merge Sort
-* [x] 33 Recursion | Fibonacci Numbers
-* [x] 34 Iteration | Fibonacci Numbers
-* [x] 35 Most frequent number in array
-* [x] 36 Two lists are rotation from each other but in different order
+* [x] 28 Recursion | Fibonacci Numbers
+* [x] 29 Iteration | Fibonacci Numbers
+* [x] 30 Most frequent number in array
+* [x] 31 Two lists are rotation from each other but in different order
 
 
 ## Leetcode.py
@@ -57,3 +52,14 @@
 * [x] 11 #771. Jewels and Stones
 * [x] 12 #819. Most Common Word
 * [x] 13 #1108. Defanging an IP Address
+
+# Sorting.py
+
+* [x] 1 Bubble sort
+* [x] 2 Selection sort
+* [x] 3 Insertion sort
+* [x] 4 Quick Sort
+* [x] 5 Merge Sort
+* [] 6 Heap Sort...
+* [] 7 Counting Sort...
+* [] 8 Radix Sort...
