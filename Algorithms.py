@@ -441,8 +441,6 @@ def binary_search(list, target):
 
 print(binary_search(list, target))
 
-
-
 # 28 Recursion | Fibonacci Numbers 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,..
 
 def fibo(n):
@@ -508,3 +506,21 @@ def is_rotation(a,b):
     return True
 
 print(is_rotation(a, b))
+
+# 32 How many times letters forming word "BALLOON" (B=1, A=1, L=2, O=2, N=1) appears in string S
+
+S = 'BBAAAONXXOLL'
+S2 = 'BAOOLLNNOLOLGBAX'
+
+def solution(S):
+
+    a1 = (S.count("B"))
+    a2 = (S.count("A"))
+    a3 = (S.count("L")/2)
+    a4 = (S.count("O")/2)
+    a5 = (S.count("N"))
+    result = (int(min(a1, a2, a3, a4, a5)))
+    return result
+
+print(solution(S))  # 1
+print(solution(S2)) # 2
