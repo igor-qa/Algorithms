@@ -35,6 +35,8 @@
 * [x] 29 Iteration | Fibonacci Numbers
 * [x] 30 Most frequent number in array
 * [x] 31 Two lists are rotation from each other but in different order
+* [x] 32 How many times letters forming word "BALLOON" (B=1, A=1, L=2, O=2, N=1) appears in string S
+* [x] 33 "local area network" should return "LAN”
 
 
 ## Leetcode.py
